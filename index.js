@@ -161,7 +161,10 @@ const totalUnfunded = GAMES_JSON.reduce( (acc, GAMES_JSON) => {
 // create a string that explains the number of unfunded games using the ternary operator
 // I added checking at the end. I know it doesn't say it in the instructoins but
 // since I'm checking for plural in games anyways it makes sense to check for this or these too
-let displayStr = `A total of $${totalRaised.toLocaleString('en-US')} has been rasied for ${GAMES_JSON.length} game${GAMES_JSON.length !== 1 ? 's' : ''}. Currently, ${totalUnfunded} game${totalUnfunded !== 1 ? 's' : ''} remain${totalUnfunded !== 1 ? 's' : ''} unfunded. We need your help to fund ${GAMES_JSON.length !== 1 ? 'these' : 'this'} amazing game${GAMES_JSON.length !== 1 ? 's' : ''}!`;
+let displayStr = `A total of $${totalRaised.toLocaleString('en-US')} 
+has been rasied for ${GAMES_JSON.length} game${GAMES_JSON.length !== 1 ? 's' : ''}. 
+Currently, ${totalUnfunded} game${totalUnfunded !== 1 ? 's' : ''} remain${totalUnfunded !== 1 ? 's' : ''} unfunded. 
+We need your help to fund ${GAMES_JSON.length !== 1 ? 'these' : 'this'} amazing game${GAMES_JSON.length !== 1 ? 's' : ''}!`;
 
 // create a new DOM element containing the template string and append it to the description container
 const displayCard = document.createElement('p'); 
